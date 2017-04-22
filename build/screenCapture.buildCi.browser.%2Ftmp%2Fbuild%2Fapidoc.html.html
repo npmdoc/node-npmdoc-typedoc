@@ -1,0 +1,1473 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://typedoc.org">typedoc (v0.5.10)</a>
+</h1>
+<h4>Create api documentations for typescript projects.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typedoc">module typedoc</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Application">
+            function <span class="apidocSignatureSpan">typedoc.</span>Application
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.CliApplication">
+            function <span class="apidocSignatureSpan">typedoc.</span>CliApplication
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Event">
+            function <span class="apidocSignatureSpan">typedoc.</span>Event
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.EventDispatcher">
+            function <span class="apidocSignatureSpan">typedoc.</span>EventDispatcher
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.ProjectReflection">
+            function <span class="apidocSignatureSpan">typedoc.</span>ProjectReflection
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.normalizePath">
+            function <span class="apidocSignatureSpan">typedoc.</span>normalizePath
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.resetReflectionID">
+            function <span class="apidocSignatureSpan">typedoc.</span>resetReflectionID
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">typedoc.</span>Application.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">typedoc.</span>CliApplication.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">typedoc.</span>Event.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">typedoc.</span>EventDispatcher.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">typedoc.</span>ProjectReflection.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typedoc.Application">module typedoc.Application</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Application.Application">
+            function <span class="apidocSignatureSpan">typedoc.</span>Application
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">typedoc.Application.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typedoc.Application.prototype">module typedoc.Application.prototype</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>isCLI</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Application.prototype.bootstrap">
+            function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>bootstrap
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Application.prototype.constructor">
+            function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Application.prototype.convert">
+            function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>convert
+            <span class="apidocSignatureSpan">(src)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Application.prototype.expandInputFiles">
+            function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>expandInputFiles
+            <span class="apidocSignatureSpan">(inputFiles)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Application.prototype.generateDocs">
+            function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>generateDocs
+            <span class="apidocSignatureSpan">(input, out)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Application.prototype.generateJson">
+            function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>generateJson
+            <span class="apidocSignatureSpan">(input, out)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Application.prototype.getTypeScriptPath">
+            function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>getTypeScriptPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Application.prototype.getTypeScriptVersion">
+            function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>getTypeScriptVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Application.prototype.toString">
+            function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>_componentOptions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>application</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>componentName</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typedoc.CliApplication">module typedoc.CliApplication</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.CliApplication.CliApplication">
+            function <span class="apidocSignatureSpan">typedoc.</span>CliApplication
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typedoc.CliApplication.prototype">module typedoc.CliApplication.prototype</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">typedoc.CliApplication.prototype.</span>isCLI</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.CliApplication.prototype.bootstrap">
+            function <span class="apidocSignatureSpan">typedoc.CliApplication.prototype.</span>bootstrap
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.CliApplication.prototype.constructor">
+            function <span class="apidocSignatureSpan">typedoc.CliApplication.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typedoc.Event">module typedoc.Event</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Event.Event">
+            function <span class="apidocSignatureSpan">typedoc.</span>Event
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typedoc.Event.prototype">module typedoc.Event.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Event.prototype.preventDefault">
+            function <span class="apidocSignatureSpan">typedoc.Event.prototype.</span>preventDefault
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.Event.prototype.stopPropagation">
+            function <span class="apidocSignatureSpan">typedoc.Event.prototype.</span>stopPropagation
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typedoc.EventDispatcher">module typedoc.EventDispatcher</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.EventDispatcher.EventDispatcher">
+            function <span class="apidocSignatureSpan">typedoc.</span>EventDispatcher
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typedoc.EventDispatcher.prototype">module typedoc.EventDispatcher.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.EventDispatcher.prototype.internalOn">
+            function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>internalOn
+            <span class="apidocSignatureSpan">(name, callback, context, priority, listening)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.EventDispatcher.prototype.listenTo">
+            function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>listenTo
+            <span class="apidocSignatureSpan">(obj, name, callback, priority)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.EventDispatcher.prototype.listenToOnce">
+            function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>listenToOnce
+            <span class="apidocSignatureSpan">(obj, name, callback, priority)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.EventDispatcher.prototype.off">
+            function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>off
+            <span class="apidocSignatureSpan">(name, callback, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.EventDispatcher.prototype.on">
+            function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>on
+            <span class="apidocSignatureSpan">(nameOrMap, callback, context, priority)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.EventDispatcher.prototype.once">
+            function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>once
+            <span class="apidocSignatureSpan">(name, callback, context, priority)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.EventDispatcher.prototype.stopListening">
+            function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>stopListening
+            <span class="apidocSignatureSpan">(obj, name, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.EventDispatcher.prototype.trigger">
+            function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>trigger
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typedoc.ProjectReflection">module typedoc.ProjectReflection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.ProjectReflection.ProjectReflection">
+            function <span class="apidocSignatureSpan">typedoc.</span>ProjectReflection
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.typedoc.ProjectReflection.prototype">module typedoc.ProjectReflection.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.ProjectReflection.prototype.constructor">
+            function <span class="apidocSignatureSpan">typedoc.ProjectReflection.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.ProjectReflection.prototype.findReflectionByName">
+            function <span class="apidocSignatureSpan">typedoc.ProjectReflection.prototype.</span>findReflectionByName
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.ProjectReflection.prototype.getReflectionsByKind">
+            function <span class="apidocSignatureSpan">typedoc.ProjectReflection.prototype.</span>getReflectionsByKind
+            <span class="apidocSignatureSpan">(kind)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.typedoc.ProjectReflection.prototype.isProject">
+            function <span class="apidocSignatureSpan">typedoc.ProjectReflection.prototype.</span>isProject
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typedoc" id="apidoc.module.typedoc">module typedoc</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Application" id="apidoc.element.typedoc.Application">
+        function <span class="apidocSignatureSpan">typedoc.</span>Application
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Application(options) {
+    var _this = _super.call(this, null) || this;
+    _this.logger = new index_3.ConsoleLogger();
+    _this.converter = _this.addComponent('converter', index_1.Converter);
+    _this.renderer = _this.addComponent('renderer', renderer_1.Renderer);
+    _this.plugins = _this.addComponent('plugins', index_3.PluginHost);
+    _this.options = _this.addComponent('options', index_4.Options);
+    _this.bootstrap(options);
+    return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            break;
+        default:
+            grunt.verbose.write(message);
+            break;
+    }
+};
+
+var app = new TypeDoc.<span class="apidocCodeKeywordSpan">Application</span>(options);
+var project = app.convert(app.expandInputFiles(this.filesSrc));
+if (!project) {
+    return false;
+}
+
+if (out) app.generateDocs(project, out);
+if (json) app.generateJson(project, json);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.CliApplication" id="apidoc.element.typedoc.CliApplication">
+        function <span class="apidocSignatureSpan">typedoc.</span>CliApplication
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CliApplication() {
+    return _super !== null &amp;&amp; _super.apply(this, arguments) || this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Event" id="apidoc.element.typedoc.Event">
+        function <span class="apidocSignatureSpan">typedoc.</span>Event
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Event(name) {
+    this._name = name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.EventDispatcher" id="apidoc.element.typedoc.EventDispatcher">
+        function <span class="apidocSignatureSpan">typedoc.</span>EventDispatcher
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventDispatcher() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.ProjectReflection" id="apidoc.element.typedoc.ProjectReflection">
+        function <span class="apidocSignatureSpan">typedoc.</span>ProjectReflection
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ProjectReflection(name) {
+    var _this = _super.call(this, null, name, abstract_1.ReflectionKind.Global) || this;
+    _this.reflections = {};
+    _this.symbolMapping = {};
+    _this.directory = new index_1.SourceDirectory();
+    _this.files = [];
+    return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.normalizePath" id="apidoc.element.typedoc.normalizePath">
+        function <span class="apidocSignatureSpan">typedoc.</span>normalizePath
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function normalizePath(path) {
+    return path.replace(/\\/g, '/');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.resetReflectionID" id="apidoc.element.typedoc.resetReflectionID">
+        function <span class="apidocSignatureSpan">typedoc.</span>resetReflectionID
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resetReflectionID() {
+    REFLECTION_ID = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typedoc.Application" id="apidoc.module.typedoc.Application">module typedoc.Application</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Application.Application" id="apidoc.element.typedoc.Application.Application">
+        function <span class="apidocSignatureSpan">typedoc.</span>Application
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Application(options) {
+    var _this = _super.call(this, null) || this;
+    _this.logger = new index_3.ConsoleLogger();
+    _this.converter = _this.addComponent('converter', index_1.Converter);
+    _this.renderer = _this.addComponent('renderer', renderer_1.Renderer);
+    _this.plugins = _this.addComponent('plugins', index_3.PluginHost);
+    _this.options = _this.addComponent('options', index_4.Options);
+    _this.bootstrap(options);
+    return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            break;
+        default:
+            grunt.verbose.write(message);
+            break;
+    }
+};
+
+var app = new TypeDoc.<span class="apidocCodeKeywordSpan">Application</span>(options);
+var project = app.convert(app.expandInputFiles(this.filesSrc));
+if (!project) {
+    return false;
+}
+
+if (out) app.generateDocs(project, out);
+if (json) app.generateJson(project, json);
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typedoc.Application.prototype" id="apidoc.module.typedoc.Application.prototype">module typedoc.Application.prototype</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Application.prototype.bootstrap" id="apidoc.element.typedoc.Application.prototype.bootstrap">
+        function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>bootstrap
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bootstrap = function (options) {
+    this.options.read(options, index_4.OptionsReadMode.Prefetch);
+    var logger = this.loggerType;
+    if (typeof logger === 'function') {
+        this.logger = new index_3.CallbackLogger(logger);
+    }
+    else if (logger === 'none') {
+        this.logger = new index_3.Logger();
+    }
+    this.plugins.load();
+    return this.options.read(options, index_4.OptionsReadMode.Fetch);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Application.prototype.constructor" id="apidoc.element.typedoc.Application.prototype.constructor">
+        function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Application(options) {
+    var _this = _super.call(this, null) || this;
+    _this.logger = new index_3.ConsoleLogger();
+    _this.converter = _this.addComponent('converter', index_1.Converter);
+    _this.renderer = _this.addComponent('renderer', renderer_1.Renderer);
+    _this.plugins = _this.addComponent('plugins', index_3.PluginHost);
+    _this.options = _this.addComponent('options', index_4.Options);
+    _this.bootstrap(options);
+    return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Application.prototype.convert" id="apidoc.element.typedoc.Application.prototype.convert">
+        function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>convert
+        <span class="apidocSignatureSpan">(src)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">convert = function (src) {
+    this.logger.writeln('Using TypeScript %s from %s', this.getTypeScriptVersion(), this.getTypeScriptPath());
+    var result = this.converter.convert(src);
+    if (result.errors &amp;&amp; result.errors.length) {
+        this.logger.diagnostics(result.errors);
+        if (this.ignoreCompilerErrors) {
+            this.logger.resetErrors();
+            return result.project;
+        }
+        else {
+            return null;
+        }
+    }
+    else {
+        return result.project;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        default:
+            grunt.verbose.write(message);
+            break;
+    }
+};
+
+var app = new TypeDoc.Application(options);
+var project = app.<span class="apidocCodeKeywordSpan">convert</span>(app.expandInputFiles(this.filesSrc));
+if (!project) {
+    return false;
+}
+
+if (out) app.generateDocs(project, out);
+if (json) app.generateJson(project, json);
+return true;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Application.prototype.expandInputFiles" id="apidoc.element.typedoc.Application.prototype.expandInputFiles">
+        function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>expandInputFiles
+        <span class="apidocSignatureSpan">(inputFiles)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">expandInputFiles = function (inputFiles) {
+    var exclude, files = [];
+    if (this.exclude) {
+        exclude = new minimatch_1.Minimatch(this.exclude);
+    }
+    function add(dirname) {
+        FS.readdirSync(dirname).forEach(function (file) {
+            var realpath = Path.join(dirname, file);
+            if (FS.statSync(realpath).isDirectory()) {
+                add(realpath);
+            }
+            else if (/\.tsx?$/.test(realpath)) {
+                if (exclude &amp;&amp; exclude.match(realpath.replace(/\\/g, '/'))) {
+                    return;
+                }
+                files.push(realpath);
+            }
+        });
+    }
+    inputFiles.forEach(function (file) {
+        file = Path.resolve(file);
+        if (FS.statSync(file).isDirectory()) {
+            add(file);
+        }
+        else if (!exclude || !exclude.match(file)) {
+            files.push(file);
+        }
+    });
+    return files;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        default:
+            grunt.verbose.write(message);
+            break;
+    }
+};
+
+var app = new TypeDoc.Application(options);
+var project = app.convert(app.<span class="apidocCodeKeywordSpan">expandInputFiles</span>(this.filesSrc));
+if (!project) {
+    return false;
+}
+
+if (out) app.generateDocs(project, out);
+if (json) app.generateJson(project, json);
+return true;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Application.prototype.generateDocs" id="apidoc.element.typedoc.Application.prototype.generateDocs">
+        function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>generateDocs
+        <span class="apidocSignatureSpan">(input, out)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateDocs = function (input, out) {
+    var project = input instanceof index_2.ProjectReflection ? input : this.convert(input);
+    if (!project) {
+        return false;
+    }
+    out = Path.resolve(out);
+    this.renderer.render(project, out);
+    if (this.logger.hasErrors()) {
+        this.logger.error('Documentation could not be generated due to the errors above.');
+    }
+    else {
+        this.logger.success('Documentation generated at %s', out);
+    }
+    return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+        var app = new TypeDoc.Application(options);
+        var project = app.convert(app.expandInputFiles(this.filesSrc));
+        if (!project) {
+            return false;
+        }
+
+        if (out) app.<span class="apidocCodeKeywordSpan">generateDocs</span>(project, out);
+        if (json) app.generateJson(project, json);
+        return true;
+    });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Application.prototype.generateJson" id="apidoc.element.typedoc.Application.prototype.generateJson">
+        function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>generateJson
+        <span class="apidocSignatureSpan">(input, out)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateJson = function (input, out) {
+    var project = input instanceof index_2.ProjectReflection ? input : this.convert(input);
+    if (!project) {
+        return false;
+    }
+    out = Path.resolve(out);
+    index_3.writeFile(out, JSON.stringify(project.toObject(), null, '\t'), false);
+    this.logger.success('JSON written to %s', out);
+    return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        var app = new TypeDoc.Application(options);
+        var project = app.convert(app.expandInputFiles(this.filesSrc));
+        if (!project) {
+            return false;
+        }
+
+        if (out) app.generateDocs(project, out);
+        if (json) app.<span class="apidocCodeKeywordSpan">generateJson</span>(project, json);
+        return true;
+    });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Application.prototype.getTypeScriptPath" id="apidoc.element.typedoc.Application.prototype.getTypeScriptPath">
+        function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>getTypeScriptPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTypeScriptPath = function () {
+    return Path.dirname(require.resolve('typescript'));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Application.prototype.getTypeScriptVersion" id="apidoc.element.typedoc.Application.prototype.getTypeScriptVersion">
+        function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>getTypeScriptVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTypeScriptVersion = function () {
+    var tsPath = this.getTypeScriptPath();
+    var json = JSON.parse(FS.readFileSync(Path.join(tsPath, '..', 'package.json'), 'utf8'));
+    return json.version;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Application.prototype.toString" id="apidoc.element.typedoc.Application.prototype.toString">
+        function <span class="apidocSignatureSpan">typedoc.Application.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return [
+        '',
+        'TypeDoc ' + Application_1.VERSION,
+        'Using TypeScript ' + this.getTypeScriptVersion() + ' from ' + this.getTypeScriptPath(),
+        ''
+    ].join(typescript.sys.newLine);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typedoc.CliApplication" id="apidoc.module.typedoc.CliApplication">module typedoc.CliApplication</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.CliApplication.CliApplication" id="apidoc.element.typedoc.CliApplication.CliApplication">
+        function <span class="apidocSignatureSpan">typedoc.</span>CliApplication
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CliApplication() {
+    return _super !== null &amp;&amp; _super.apply(this, arguments) || this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typedoc.CliApplication.prototype" id="apidoc.module.typedoc.CliApplication.prototype">module typedoc.CliApplication.prototype</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.CliApplication.prototype.bootstrap" id="apidoc.element.typedoc.CliApplication.prototype.bootstrap">
+        function <span class="apidocSignatureSpan">typedoc.CliApplication.prototype.</span>bootstrap
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bootstrap = function (options) {
+    var result = _super.prototype.bootstrap.call(this, options);
+    if (result.hasErrors) {
+        process.exit(1);
+        return;
+    }
+    if (this.version) {
+        typescript.sys.write(this.toString());
+    }
+    else if (this.help) {
+        typescript.sys.write(help_1.getOptionsHelp(this.options));
+    }
+    else if (result.inputFiles.length === 0) {
+        typescript.sys.write(help_1.getOptionsHelp(this.options));
+        process.exit(2);
+    }
+    else if (!this.out &amp;&amp; !this.json) {
+        this.logger.error("You must either specify the 'out' or 'json' option.");
+        process.exit(3);
+    }
+    else {
+        var src = this.expandInputFiles(result.inputFiles);
+        var project = this.convert(src);
+        if (project) {
+            if (this.out) {
+                this.generateDocs(project, this.out);
+            }
+            if (this.json) {
+                this.generateJson(project, this.json);
+            }
+            if (this.logger.hasErrors()) {
+                process.exit(5);
+            }
+        }
+        else {
+            process.exit(4);
+        }
+    }
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.CliApplication.prototype.constructor" id="apidoc.element.typedoc.CliApplication.prototype.constructor">
+        function <span class="apidocSignatureSpan">typedoc.CliApplication.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CliApplication() {
+    return _super !== null &amp;&amp; _super.apply(this, arguments) || this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typedoc.Event" id="apidoc.module.typedoc.Event">module typedoc.Event</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Event.Event" id="apidoc.element.typedoc.Event.Event">
+        function <span class="apidocSignatureSpan">typedoc.</span>Event
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Event(name) {
+    this._name = name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typedoc.Event.prototype" id="apidoc.module.typedoc.Event.prototype">module typedoc.Event.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Event.prototype.preventDefault" id="apidoc.element.typedoc.Event.prototype.preventDefault">
+        function <span class="apidocSignatureSpan">typedoc.Event.prototype.</span>preventDefault
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preventDefault = function () {
+    this._isDefaultPrevented = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.Event.prototype.stopPropagation" id="apidoc.element.typedoc.Event.prototype.stopPropagation">
+        function <span class="apidocSignatureSpan">typedoc.Event.prototype.</span>stopPropagation
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopPropagation = function () {
+    this._isPropagationStopped = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typedoc.EventDispatcher" id="apidoc.module.typedoc.EventDispatcher">module typedoc.EventDispatcher</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.EventDispatcher.EventDispatcher" id="apidoc.element.typedoc.EventDispatcher.EventDispatcher">
+        function <span class="apidocSignatureSpan">typedoc.</span>EventDispatcher
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventDispatcher() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typedoc.EventDispatcher.prototype" id="apidoc.module.typedoc.EventDispatcher.prototype">module typedoc.EventDispatcher.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.EventDispatcher.prototype.internalOn" id="apidoc.element.typedoc.EventDispatcher.prototype.internalOn">
+        function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>internalOn
+        <span class="apidocSignatureSpan">(name, callback, context, priority, listening)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">internalOn = function (name, callback, context, priority, listening) {
+    if (priority === void 0) { priority = 0; }
+    this._events = eventsApi(onApi, this._events || {}, name, callback, {
+        context: context,
+        ctx: this,
+        listening: listening,
+        priority: priority
+    });
+    if (listening) {
+        var listeners = this._listeners || (this._listeners = {});
+        listeners[listening.id] = listening;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.EventDispatcher.prototype.listenTo" id="apidoc.element.typedoc.EventDispatcher.prototype.listenTo">
+        function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>listenTo
+        <span class="apidocSignatureSpan">(obj, name, callback, priority)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenTo = function (obj, name, callback, priority) {
+    if (!obj) {
+        return this;
+    }
+    var id = obj._listenId || (obj._listenId = _.uniqueId('l'));
+    var listeningTo = this._listeningTo || (this._listeningTo = {});
+    var listening = listeningTo[id];
+    if (!listening) {
+        var thisId = this._listenId || (this._listenId = _.uniqueId('l'));
+        listening = listeningTo[id] = {
+            obj: obj,
+            objId: id,
+            id: thisId,
+            listeningTo: listeningTo,
+            count: 0
+        };
+    }
+    obj.internalOn(name, callback, this, priority, listening);
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.EventDispatcher.prototype.listenToOnce" id="apidoc.element.typedoc.EventDispatcher.prototype.listenToOnce">
+        function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>listenToOnce
+        <span class="apidocSignatureSpan">(obj, name, callback, priority)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenToOnce = function (obj, name, callback, priority) {
+    var events = eventsApi(onceMap, {}, name, callback, _.bind(this.stopListening, this, obj));
+    return this.listenTo(obj, events, void 0, priority);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.EventDispatcher.prototype.off" id="apidoc.element.typedoc.EventDispatcher.prototype.off">
+        function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>off
+        <span class="apidocSignatureSpan">(name, callback, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">off = function (name, callback, context) {
+    if (!this._events) {
+        return this;
+    }
+    this._events = eventsApi(offApi, this._events, name, callback, {
+        context: context,
+        listeners: this._listeners
+    });
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.EventDispatcher.prototype.on" id="apidoc.element.typedoc.EventDispatcher.prototype.on">
+        function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>on
+        <span class="apidocSignatureSpan">(nameOrMap, callback, context, priority)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (nameOrMap, callback, context, priority) {
+    this.internalOn(nameOrMap, callback, context, priority);
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.EventDispatcher.prototype.once" id="apidoc.element.typedoc.EventDispatcher.prototype.once">
+        function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>once
+        <span class="apidocSignatureSpan">(name, callback, context, priority)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">once = function (name, callback, context, priority) {
+    var events = eventsApi(onceMap, {}, name, callback, _.bind(this.off, this));
+    return this.on(events, void 0, context, priority);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.EventDispatcher.prototype.stopListening" id="apidoc.element.typedoc.EventDispatcher.prototype.stopListening">
+        function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>stopListening
+        <span class="apidocSignatureSpan">(obj, name, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopListening = function (obj, name, callback) {
+    var listeningTo = this._listeningTo;
+    if (!listeningTo) {
+        return this;
+    }
+    var ids = obj ? [obj._listenId] : _.keys(listeningTo);
+    for (var i = 0; i &lt; ids.length; i++) {
+        var listening = listeningTo[ids[i]];
+        if (!listening) {
+            break;
+        }
+        listening.obj.off(name, callback, this);
+    }
+    if (_.isEmpty(listeningTo)) {
+        this._listeningTo = void 0;
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.EventDispatcher.prototype.trigger" id="apidoc.element.typedoc.EventDispatcher.prototype.trigger">
+        function <span class="apidocSignatureSpan">typedoc.EventDispatcher.prototype.</span>trigger
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trigger = function (name) {
+    var args = [];
+    for (var _i = 1; _i &lt; arguments.length; _i++) {
+        args[_i - 1] = arguments[_i];
+    }
+    if (!this._events) {
+        return this;
+    }
+    if (name instanceof Event) {
+        triggerApi(this._events, name.name, void 0, [name], function (events, args) {
+            var ev, i = -1, l = events.length;
+            while (++i &lt; l) {
+                if (name.isPropagationStopped) {
+                    return;
+                }
+                ev = events[i];
+                ev.callback.apply(ev.ctx, args);
+            }
+        });
+    }
+    else {
+        eventsApi(triggerApi, this._events, name, void 0, args);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typedoc.ProjectReflection" id="apidoc.module.typedoc.ProjectReflection">module typedoc.ProjectReflection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.ProjectReflection.ProjectReflection" id="apidoc.element.typedoc.ProjectReflection.ProjectReflection">
+        function <span class="apidocSignatureSpan">typedoc.</span>ProjectReflection
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ProjectReflection(name) {
+    var _this = _super.call(this, null, name, abstract_1.ReflectionKind.Global) || this;
+    _this.reflections = {};
+    _this.symbolMapping = {};
+    _this.directory = new index_1.SourceDirectory();
+    _this.files = [];
+    return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.typedoc.ProjectReflection.prototype" id="apidoc.module.typedoc.ProjectReflection.prototype">module typedoc.ProjectReflection.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.ProjectReflection.prototype.constructor" id="apidoc.element.typedoc.ProjectReflection.prototype.constructor">
+        function <span class="apidocSignatureSpan">typedoc.ProjectReflection.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ProjectReflection(name) {
+    var _this = _super.call(this, null, name, abstract_1.ReflectionKind.Global) || this;
+    _this.reflections = {};
+    _this.symbolMapping = {};
+    _this.directory = new index_1.SourceDirectory();
+    _this.files = [];
+    return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.ProjectReflection.prototype.findReflectionByName" id="apidoc.element.typedoc.ProjectReflection.prototype.findReflectionByName">
+        function <span class="apidocSignatureSpan">typedoc.ProjectReflection.prototype.</span>findReflectionByName
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findReflectionByName = function (arg) {
+    var names = Array.isArray(arg) ? arg : arg.split('.');
+    var name = names.pop();
+    search: for (var key in this.reflections) {
+        var reflection = this.reflections[key];
+        if (reflection.name !== name) {
+            continue;
+        }
+        var depth = names.length - 1;
+        var target = reflection;
+        while (target &amp;&amp; depth &gt;= 0) {
+            target = target.parent;
+            if (target.name !== names[depth]) {
+                continue search;
+            }
+            depth -= 1;
+        }
+        return reflection;
+    }
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.ProjectReflection.prototype.getReflectionsByKind" id="apidoc.element.typedoc.ProjectReflection.prototype.getReflectionsByKind">
+        function <span class="apidocSignatureSpan">typedoc.ProjectReflection.prototype.</span>getReflectionsByKind
+        <span class="apidocSignatureSpan">(kind)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getReflectionsByKind = function (kind) {
+    var values = [];
+    for (var id in this.reflections) {
+        var reflection = this.reflections[id];
+        if (reflection.kindOf(kind)) {
+            values.push(reflection);
+        }
+    }
+    return values;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.typedoc.ProjectReflection.prototype.isProject" id="apidoc.element.typedoc.ProjectReflection.prototype.isProject">
+        function <span class="apidocSignatureSpan">typedoc.ProjectReflection.prototype.</span>isProject
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isProject = function () {
+    return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
